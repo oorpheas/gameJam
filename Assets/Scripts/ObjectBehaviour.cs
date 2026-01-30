@@ -11,9 +11,6 @@ public class ObjectBehaviour : MonoBehaviour
       private Vector3 _startScale;
       private Vector3 _newScale;
 
-      private Vector2 _minBounds;
-      private Vector2 _maxBounds;
-
       private SpriteRenderer _sR;
       private static int _topSortingOrder = 0;
 
@@ -57,15 +54,12 @@ public class ObjectBehaviour : MonoBehaviour
             // limita na area definida acima
             Vector3 targetPos = mousePoint + _offset;
 
-            targetPos.x = Mathf.Clamp(targetPos.x, InteractionLimits.minBounds.x, InteractionLimits.maxBounds.x);
-            targetPos.y = Mathf.Clamp(targetPos.y, InteractionLimits.minBounds.y, InteractionLimits.maxBounds.y);
+            targetPos.x = Mathf.Clamp(targetPos.x, 
+                  InteractionLimits.minBounds.x, InteractionLimits.maxBounds.x);
+            targetPos.y = Mathf.Clamp(targetPos.y, 
+                  InteractionLimits.minBounds.y, InteractionLimits.maxBounds.y);
 
             transform.position = targetPos;
-      }
-
-      void OnMouseUp() {
-            // remove o destaque
-            Highlight(!_isDraging);
       }
 
       void Highlight(bool toggle) {
@@ -73,5 +67,9 @@ public class ObjectBehaviour : MonoBehaviour
             transform.localScale = toggle
                 ? new Vector3(_newScale.x, _newScale.y, _newScale.z)
                 : _startScale;
+      }
+      void OnMouseUp() {
+            // remove o destaque
+            Highlight(!_isDraging);
       }
 }

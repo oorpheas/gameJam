@@ -13,11 +13,11 @@ public class InteractionLimits : MonoBehaviour
 
             float z = Camera.main.WorldToScreenPoint(transform.position).z;
 
-            Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(
-                new Vector3(0.3f, 0f, z)
+            Vector3 bottomLeft = Camera.main.ViewportToWorldPoint( // define o ponto inferior esquerdo da camera
+                new Vector3(0.3f, 0f, z) // estamos diminuindo para nao pegar a area toda
             );
 
-            Vector3 topRight = Camera.main.ViewportToWorldPoint(
+            Vector3 topRight = Camera.main.ViewportToWorldPoint( // define o ponto superior direito da camera
                 new Vector3(1f, 1f, z)
             );
 
@@ -27,19 +27,16 @@ public class InteractionLimits : MonoBehaviour
             StretchSpriteToArea(_sR, bottomLeft, topRight);
       }
 
+      // essa função serve para ajustar uma sprite para ela formar a "mesa"
       void StretchSpriteToArea(SpriteRenderer spriteRenderer, Vector3 areaBottomLeft, Vector3 areaTopRight) {
-            // Tamanho da área (world units)
             float areaWidth = areaTopRight.x - areaBottomLeft.x;
             float areaHeight = areaTopRight.y - areaBottomLeft.y;
 
-            // Tamanho original da sprite (world units, sem escala)
             Vector2 spriteSize = spriteRenderer.sprite.bounds.size;
 
-            // Escalas independentes (STRETCH)
             float scaleX = areaWidth / spriteSize.x;
             float scaleY = areaHeight / spriteSize.y;
 
-            // Aplica a escala
             spriteRenderer.transform.localScale = new Vector3(scaleX, scaleY, 1f);
 
             // Centraliza na área

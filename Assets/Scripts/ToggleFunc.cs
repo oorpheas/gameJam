@@ -7,7 +7,7 @@ public class ToggleFunc : MonoBehaviour
 
       private bool _controller = false;
 
-      public void Toggle() {
+      public void Toggle() { // é só uma função para altenar o estado de visibilidade do painel
             _controller = !_controller;
             _target.SetActive(_controller);
       }
