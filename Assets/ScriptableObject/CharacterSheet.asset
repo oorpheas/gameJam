@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e604a7995bb62048b7a89fbf4aa5959, type: 3}
+  m_Name: CharacterSheet
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSheet
+  nameChar: Condessa
+  picChar: {fileID: -4864499605307769437, guid: f7a0a760c16e3db4fa3dfefd918464df, type: 3}
+  answers:
+  - "estava no sal\xE3o"
+  - nada, apenas encontrei isso...
+  - "apenas boas mem\xF3rias"
+  item:
+  - obj: {fileID: 1326514094662128903, guid: d1a7dafe2a6bd484495bafb1108f44dd, type: 3}
+    linkedIndex: 1
+    itemLocked: 1

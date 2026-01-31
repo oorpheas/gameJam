@@ -14,7 +14,7 @@ public class InteractionLimits : MonoBehaviour
             float z = Camera.main.WorldToScreenPoint(transform.position).z;
 
             Vector3 bottomLeft = Camera.main.ViewportToWorldPoint( // define o ponto inferior esquerdo da camera
-                new Vector3(0.3f, 0f, z) // estamos diminuindo para nao pegar a area toda
+                new Vector3(0.3f, 0.2f, z) // estamos diminuindo para nao pegar a area toda
             );
 
             Vector3 topRight = Camera.main.ViewportToWorldPoint( // define o ponto superior direito da camera
@@ -56,7 +56,7 @@ public class InteractionLimits : MonoBehaviour
 
             // Limites responsivos (Viewport)
             Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(
-                new Vector3(0.3f, 0f, z)
+                new Vector3(0.3f, 0.2f, z)
             );
 
             Vector3 topRight = Camera.main.ViewportToWorldPoint(
@@ -77,7 +77,7 @@ public class InteractionLimits : MonoBehaviour
 
             // Limites responsivos (Viewport)
             Vector3 bottomLeft2 = Camera.main.ViewportToWorldPoint(
-                new Vector3(0f, 0f, z)
+                new Vector3(0f, 0.2f, z)
             );
 
             Vector3 topRight2 = Camera.main.ViewportToWorldPoint(

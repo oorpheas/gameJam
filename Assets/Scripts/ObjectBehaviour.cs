@@ -9,7 +9,7 @@ public class ObjectBehaviour : MonoBehaviour
 
       private Vector3 _offset;
       private Vector3 _startScale;
-      private Vector3 _newScale;s
+      private Vector3 _newScale;
 
       private SpriteRenderer _sR;
       private static int _topSortingOrder = 0;
