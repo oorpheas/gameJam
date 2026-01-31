@@ -9,11 +9,6 @@ using static UnityEditor.Progress;
 
 public class GameManager : MonoBehaviour
 {
-      [System.Serializable]
-      public struct CharDatas { 
-            public CharacterSheet data;
-      }
-
       [Header("Info")]
       public List<CharacterSheet> pers = new List<CharacterSheet>();
       [SerializeField] private Transform _itemSpot;

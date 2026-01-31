@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSheet
   nameChar: Bobo
   picChar: {fileID: -3276878531786958012, guid: f07a38c7cfaf6a7418911bbb8f7ff68d, type: 3}
-  answers: []
+  answers:
+  - muehehehe
+  - muehehehe
+  - muehehehe
   item: []

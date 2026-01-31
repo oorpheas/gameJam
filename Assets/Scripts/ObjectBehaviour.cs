@@ -68,6 +68,7 @@ public class ObjectBehaviour : MonoBehaviour
                 ? new Vector3(_newScale.x, _newScale.y, _newScale.z)
                 : _startScale;
       }
+
       void OnMouseUp() {
             // remove o destaque
             Highlight(!_isDraging);
